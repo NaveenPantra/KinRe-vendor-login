@@ -1,0 +1,376 @@
+/* Created by Naveen Pantra on May, 2018 */
+/*-------------- Basic setup  --------------*/
+:root {
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,0.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,0.06);
+    --line: 1px solid var(--color-grey-light-2);
+}
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    background-image: linear-gradient(to right bottom, var(--color-grey-light-2), var(--color-grey-light-4));
+    position: relative;
+}
+
+.line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #95a5a6, rgba(0, 0, 0, 0));
+}
+
+
+/*-------------- Basic setup --------------*/
+
+/*---- Headings -----*/
+
+.heading-small {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    color: inherit;
+    margin-bottom: 0.7rem;
+}
+
+/*---- Headings ----*/
+
+/*---- Animations ----*/
+
+@keyframes fromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem) skewX(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) skewX(-10deg);
+    }
+}
+
+@keyframes evolve {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fromLeft {
+    0% {
+        transform: translateX(-5rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bump {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
+/*---- Animations ----*/
+
+/*---- main, header Begin ----*/
+
+.main {
+    min-height: 100vh;
+    background-color: #2c3e50;
+
+    /*Flex Properties*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    transform: skewX(-10deg);
+    width: 40rem;
+    background-color: #fff;
+    padding: 2.3rem 4rem 5rem;
+    border-radius: 1rem;
+    box-shadow: 1.4rem 1.4rem 5rem #333;
+    visibility: hidden;
+
+
+}
+
+.header_visible {
+    visibility: visible;
+    animation: fromTop 0.5s ease-in;
+    animation-fill-mode: backwards;
+}
+
+.intro {
+    margin-bottom: 2.3rem;
+}
+
+
+/*---- Main, header End----*/
+
+/*---- form begin ----*/
+
+.form {
+    display: block;
+    margin: 0 auto;
+    transform: skewX(10deg);
+}
+
+.input {
+    /*margin-bottom: 1.3rem;*/
+}
+
+.label-field {
+    display: inline-block;
+    cursor: text;
+    transform: translateY(2rem);
+}
+
+
+.label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 0.46rem;
+    padding-left: 0;
+
+    transform: translateY(-5.5rem);
+    transition: all 0.3s;
+}
+
+.input-filed {
+    font-size: 2rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    color: var(--color-grey-dark-1);
+    padding-left: 0.3rem;
+    margin-bottom: 1rem;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-grey-dark-3);
+}
+
+.input-filed:placeholder-shown + .label {
+    cursor: text;
+    margin-top: 0;
+    padding-left: 0.3rem;
+    font-size: 1.5rem;
+    color: transparent;
+    visibility: hidden;
+    transform: translateY(-3rem);
+}
+
+.input-filed::-webkit-input-placeholder {
+    font-size: 1.5rem;
+    color: var(--color-grey-light-4);
+    transition: all 0.3s;
+}
+
+.inp-submit {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    transform: translateY(0rem);
+    transition: all 0.3s;
+}
+
+input[type='password'], input[type='email'] {
+    letter-spacing: 2px;
+}
+
+
+/*---- form end ----*/
+
+/*---- Buttons begin ----*/
+
+.btn {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-0.3rem);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-med {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: var(--color-grey-dark-2);
+    border-bottom: 2px solid var(--color-grey-dark-2);
+
+    transition: all 0.3s;
+}
+
+.btn-med:hover, .btn-med:active {
+    color: #fff;
+    background-color: var(--color-grey-dark-2);
+}
+
+
+/*---- links ----*/
+
+a {
+    text-decoration: none;
+}
+
+/*---- Icons ----*/
+
+.icons {
+    font-size: 1.5rem;
+}
+
+.icon-small {
+    color: var(--color-grey-dark-3);
+}
+
+/*INTRODUCTION*/
+
+.section_intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6rem;
+    width: 100%;
+    background-color: #34495e;
+}
+
+.intro_hold {
+    height: 100%;
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    animation: fromLeft 0.5s ease-in;
+    animation-fill-mode: backwards;
+}
+
+.kinre_logo {
+    width: 9rem;
+
+    transition: all 0.3s;
+}
+
+.kinre_logo:hover, .kinre_logo:active, .kinre_logo:focus {
+    animation: bump 1.2s ease;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+
+.link_list {
+    list-style: none;
+    font-size: 1.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link_item {
+    /*padding: 1rem;*/
+    background-color: #2c3e50;
+    border-radius: 5px;
+    animation: evolve 0.5s ease-in;
+    animation-fill-mode: backwards;
+
+    transition: all 0.3s;
+}
+
+.link_item:hover {
+    transform: translateY(-0.5rem) scale(1.1);
+    box-shadow: var(--shadow-dark);
+}
+
+.link_item:active {
+    transform: translateY(0rem) scale(1);
+    box-shadow: var(--shadow-light);
+}
+
+.link_item:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.link {
+    text-decoration: none;
+    border: none;
+    color: #fff;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-medium {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    /*width: 2.5rem;*/
+    /*height: 1.5rem;*/
+}
+
+.icon-large {
+    font-size: 3rem;
+    padding-right: 1rem;
+}
+
+.link_adjust {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.icon-medium_adjust {
+    position: absolute;
+    top: 0.3rem;
+    left: 0;
+    font-size: 3rem;
+}
+
+.active {
+    background-color: #34495e;
+}

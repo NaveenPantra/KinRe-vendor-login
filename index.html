@@ -1,0 +1,87 @@
+<!-- Created by Naveen Pantra on May, 2018 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>KinRe | Vendor</title>
+
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/kinreLogo.png">
+</head>
+<body>
+
+    <section class="section_intro">
+        <div class="intro_hold">
+
+            <div class="logo">
+                <a href="http://kinre.in"><img src="./img/kinreLogo_01.png" alt="" class="kinre_logo"></a>
+            </div>
+            <div class="extra_links">
+                <ul class="link_list">
+                    <li class="link_item active"><a href="#" class="link"><ion-icon name="ios-log-in" class="icon-medium"></ion-icon> Login</a></li>
+                    <li class="link_item"><a href="#" class="link"><ion-icon name="ios-person-add" class="icon-medium"></ion-icon> Register</a></li>
+                    <li class="link_item"><a href="#" class="link link_adjust"><ion-icon name="ios-help" class="icon-medium_adjust"></ion-icon> Forget Password</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <main class="main">
+        <header class="header">
+            <section class="section-login">
+                <div class="intro">
+                    <h3 class="heading-small">
+                        KinRe Vendor | Login
+                    </h3>
+                    <hr class="line">
+                </div>
+                <form action="#" method="POST" name="form" class="form">
+                    <div class="inp-field">
+                        <!--<div class="label-field">-->
+                            <!--<label class="label" for="uname">Username</label>-->
+                        <!--</div>-->
+                        <div class="input">
+                            <!--<span class="icons"><i class="ion-ios-person icon-small"></i></span>-->
+                            <input type="email" class="input-filed" name="uname" id="uname" required autocomplete placeholder="Username">
+                            <label class="label" for="uname">Username</label>
+                        </div>
+                    </div>
+                    <div class="inp-field">
+                        <!--<div class="label-field">-->
+                            <!--<label class="label" for="pword">password</label>-->
+                        <!--</div>-->
+                        <div class="input">
+                            <!--<span class="icons"><i class="ion-ios-locked icon-small"></i></span>-->
+                            <input type="password" class="input-filed" name="pword" id="pword" minlength="8" required autocomplete placeholder="Password">
+                            <!--<span class="icons"><i class="ion-ios-locked icon-small"></i></span>-->
+                            <label class="label" for="pword">Password</label>
+                        </div>
+                    </div>
+                    <div class="inp-submit">
+                        <div class="reg-link">
+                            <a href="#" class="register btn btn-med">Register &rarr;</a>
+                        </div>
+                        <div class="sub-btn">
+                            <input type="submit" name="login" class="btn btn-med" value="Login &Rarr;">
+                        </div>
+
+
+                    </div>
+                </form>
+            </section>
+        </header>
+        <!--<footer class="footer">-->
+            <!--<span class="message">-->
+                <!--<h3 class="small-heading">-->
+                    <!--Login to have some fun.-->
+                <!--</h3>-->
+            <!--</span>-->
+        <!--</footer>-->
+    </main>
+    <script src="https://unpkg.com/ionicons@4.1.1/dist/ionicons.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
